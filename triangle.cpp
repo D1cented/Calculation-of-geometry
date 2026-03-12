@@ -31,7 +31,7 @@ int main(){
 
 int check_exist(int firSide, int secSide, int thirSide)
 {
-	bool isos;
+	bool isos = false;
 	int sum12 = firSide + secSide;
 	int sum13 = firSide + thirSide;
 	int sum23 = secSide + thirSide;
@@ -59,7 +59,9 @@ int check_isosceles(int firSide, int secSide, int thirSide)
 int countings(int firSide, int secSide, int thirSide)
 {
 	int perim = firSide + secSide + thirSide;
-	int square = sqrt(perim/2 * (perim/2 - firSide) * (perim/2 - secSide) * (perim/2 - thirSide));
+	double halfPerim = perim / 2.0;
+	double square = sqrt(halfPerim * (halfPerim - firSide) * 
+	(halfPerim - secSide) * (halfPerim - thirSide));
 	
 	cout << "Triangle's perimeter: " << endl;
 	cout << perim << endl;
