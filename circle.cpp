@@ -12,13 +12,17 @@ int ring(int r,int ang){
   return 0;
 }
 
+
+
 int main(){
-  unsigned int in_r, in_ang;
+  int in_r, in_ang;
   while (1){
     std::cout << "Введите радиус круга: " << std::endl;
     std::cin >> in_r;
     std::cout << "Введите угол сектора в градусах: " << std::endl;
     std::cin >> in_ang;
+    
+    //проверка на допустимые значения
     if (in_r > 0 && 0 <= in_ang && in_ang <= 360){
       break;
     }
